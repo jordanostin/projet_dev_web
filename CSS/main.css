@@ -1,0 +1,323 @@
+/* Police écriture */
+
+@font-face {
+    font-family: 'ambleregular';
+    src: url('fonts/Amble-Regular-webfont.eot');
+    src: url('fonts/Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Amble-Regular-webfont.woff2') format('woff2'),
+         url('fonts/Amble-Regular-webfont.woff') format('woff'),
+         url('fonts/Amble-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Amble-Regular-webfont.svg#ambleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+header, footer, section, menu, nav
+{
+    display: block;
+}
+
+body
+{
+    line-height: 1;
+    -webkit-text-size-adjust: none;
+    -ms-overflow-style: scrollbar;
+    background-color: #312450;
+}
+
+ul
+{
+    list-style: none;
+}
+
+mark
+{
+    background-color: transparent;
+    color: inherit;
+}
+input::-moz-focus-inner
+{
+    border: 0;
+    padding: 0;
+}
+
+input, select, textarea
+{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-text-appearance: none;
+    appearance: none;
+}
+
+/* basic */
+
+@-ms-viewport
+{
+    width: device-with;
+}
+
+@media screen and (max-witdh: 480px) 
+{
+    html, body
+    {
+        min-width: 320px;
+    }
+}
+
+html
+{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after
+{
+    box-sizing: inherit;
+}
+
+body.is-preload *, body.is-preload *::before, body.is-preload *::after
+{
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
+
+/* type */
+
+body, input, select, textarea
+{
+    color: rgba(255, 255, 255, 0.55);
+    font-family: 'ambleregular', Arial, Helvetica, sans-serif;
+    font-size: 16.5pt;
+    font-weight: normal;
+    line-height: 1.75;
+}
+
+@media screen and (max-width: 1680px) 
+{
+    body, input, select, textarea
+    {
+        font-size: 13pt;
+    }
+}
+
+@media screen and (max-width: 1280px) 
+{
+    body, input, select, textarea
+    {
+        font-size: 12pt;
+    }
+}
+
+@media screen and (max-width: 360px) 
+{
+    body, input, select, textarea
+    {
+        font-size: 11pt;
+    }
+}
+
+a:hover
+{
+    border-bottom-color: transparent;
+    color: #ffffff;
+}
+
+strong
+{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+p
+{
+    margin: 0 0 2em 0;
+}
+
+h1, h2, h3
+{
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 0.5em 0;
+}
+
+h1 a, h2 a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+h1
+{
+    font-size: 2.75em;
+}
+
+    h1.major
+    {
+        margin: 0 0 1.3em 0;
+        position: relative;
+        padding-bottom: 0.35em;
+    }
+
+        h1.major::after
+        {
+            background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
+            background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
+            background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
+            background-image: linear-gradient(to right, #5e42a6, #b74e91);
+            -moz-transition: max-width 0.2s ease;
+            -webkit-transition: max-width 0.2s ease;
+            -ms-transition: max-width 0.2s ease;
+            transition: max-width 0.2s ease;
+            border-radius: 0.2em;
+            bottom: 0;
+            content: '';
+            height: 0.05em;
+            position:absolute;
+            right: 0;
+            width: 100%;
+        }
+
+h2
+{
+    font-size: 1.75em;
+}
+
+h3
+{
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 736px)
+{
+    h1
+    {
+        font-size: 2em;
+    }
+
+    h2
+    {
+        font-size: 1.25em;
+    }
+
+    h3
+    {
+        font-size: 1em;
+    }
+}
+
+sub
+{
+    font-size: 0.8em;
+    position: relative;
+    top: 0.5em;
+}
+
+sup
+{
+    font-size: 0.8em;
+    position: relative;
+    top: -0.5em;
+}
+
+
+/* formulaire */
+
+form
+{
+    margin: 0 0 2em 0;
+}
+    form > :last-child
+    {
+        margin-bottom: 0;
+    }
+
+    form > .fields
+    {
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: calc(100% 0 3em);
+        margin: -1.5em 0 2em -1.5em;
+    }
+
+        form > .fields > .field
+        {
+            -moz-flex-grow: 0;
+            -webkit-flex-grow: 0;
+            -ms-flex-grow: 0;
+            flex-grow: 0;
+            -moz-flex-shrink: 0;
+            -webkit-flex-shrink: 0;
+            -ms-flex-shrink: 0;
+            flex-shrink: 0;
+            padding: 1.5em 0 0  1.5em;
+            width: calc(100% + 1.5em);
+        }
+
+            form > .fields > .field.half
+            {
+                width: calc(50% + 0.75em);
+            }
+
+            form > .fields > .field.third
+            {
+                width: calc(100%/3 + 0.5em);
+            }
+
+            form > .fields > .field.quater
+            {
+                width: calc(25% + 0.375em);
+            }
+    
+    @media screen and (max-width: 480px)
+    {
+        form > .fields
+        {
+            width: calc(100% + 3em);
+            margin: -1.5em 0 2em -1.5em;
+        }
+
+            form > .fields > .field
+            {
+                width: calc(100% - 1.5em);
+                padding: 1.5em 0 0 1.5em;
+            }
+
+                form > .fields > .field.half
+                {
+                    width: calc(100% - 1.5em);
+                }
+
+                form > .fields > .field.third
+                {
+                    width: calc(100% - 1.5em);
+                }
+
+                form > .fields > .field.quater
+                {
+                    width: calc(100% - 1.5em);
+                }
+    }
+
