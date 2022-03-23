@@ -52,9 +52,9 @@
 
         $sidebar_a.each(function()
         {
-            let $this = $(this);
-            let id = $this.attr('href');
-            let $section = $(id);
+            let $this = $(this),
+                id = $this.attr('href'),
+                $section = $(id);
 
             // pas de section pour ce lien.
                 if ($section.length < 1)
@@ -116,9 +116,9 @@
         })
         .each(function()
         {
-            let $this = $(this);
-            let $image = $this.find('.image');
-            let $img = $image.find('img'),
+            let $this = $(this),
+                $image = $this.find('.image'),
+                $img = $image.find('img'),
                 x;
 
             // image assigné.
